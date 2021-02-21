@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khoa biểu</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            font-family: cursive;
+            font-size: 65%;
+        }
+        table {
+            height: 100vh;
+            width: 100vw;
+            border-collapse: collapse;
+            border: 10px solid rebeccapurple;
+        }
+        table th, td{
+            width: 14vw;
+            height: 7vh;
+            text-align: center;
+            border: solid black 1px;
+        }
+        a {
+            text-decoration: none;
+            color: rebeccapurple;
+        }
+        table td a:hover {
+            color: red;
+        }
+    </style>
+    <script>
+        function tiet(id, nb) {
+            switch(nb) {
+                case '1':   nb= '7h - 7h50'; break;
+                case '2':   nb= '7h50 - 8h40'; break;
+                case '3':   nb= '9h - 9h50'; break;
+                case '4':   nb= '9h50 - 10h40'; break;
+                case '5':   nb= '10h40 - 11h30'; break;
+                case '6':   nb= '13h - 13h50'; break;
+                case '7':   nb= '13h50 - 14h40'; break;
+                case '8':   nb= '15h - 15h50';  break;
+                case '9':   nb= '15h50 - 16h40';    break;
+                case '10':  nb= '16h40 - 17h30';    break;
+            }
+            document.getElementById(id).innerText= nb;
+        }
+        function het(id, nb) {
+            document.getElementById(id).innerText= nb;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Tiết</th>
+            <th>Thứ 2</th>
+            <th>Thứ 3</th>
+            <th>Thứ 4</th>
+            <th>Thứ 5</th>
+            <th>Thứ 6</th>
+            <th>Thứ 7</th>
+        </tr>
+        <tr>
+            <th id="tiet1" onmouseover="tiet('tiet1', '1')" onmouseout="het('tiet1', '1')">1</th>
+            <td rowspan="2"><a href="#">Phân tích thiết kế hệ thống thông tin</a></td>
+            <td rowspan="2"><a href="#">Phát triển ứng dụng Web 2</a></td>
+            <td rowspan="5"><a href="#">Lập trình Java</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th id="tiet2" onmouseover="tiet('tiet2', '2')" onmouseout="het('tiet2', '2')">2</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th id="tiet3" onmouseover="tiet('tiet3', '3')" onmouseout="het('tiet3', '3')">3</th>
+            <td rowspan="2"><a href="#">Giáo dục thể chất I</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td rowspan="3"><a href="#">Lí thuyết đồ thị</a></td>
+        </tr>
+        <tr>
+            <th id="tiet4" onmouseover="tiet('tiet4', '4')" onmouseout="het('tiet4', '4')">4</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th id="tiet5" onmouseover="tiet('tiet5', '5')" onmouseout="het('tiet5', '5')">5</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <td style="height: 1.5vh;"></td>
+        <tr>
+            <th id="tiet6" onmouseover="tiet('tiet6', '6')" onmouseout="het('tiet6', '6')">6</th>
+            <td rowspan="3"><a href="https://meet.google.com/pdw-qvvn-qav">Xác suất thống kê A</a></td>
+            <td rowspan="2"><a href="#">Hệ điều hành mã nguồn mở</a></td>
+            <td></td>
+            <td></td>
+            <td rowspan="2"><a href="#">Phương pháp nghiên cứu khoa học trong công nghệ thông tin</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th id="tiet7" onmouseover="tiet('tiet7', '7')" onmouseout="het('tiet7', '7')">7</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th id="tiet8" onmouseover="tiet('tiet8', '8')" onmouseout="het('tiet8', '8')">8</th>
+            <td></td>
+            <td></td>
+            <td rowspan="3"><a href="#">Phân tích thiết kế hệ thống thông tin</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th id="tiet9" onmouseover="tiet('tiet9', '9')" onmouseout="het('tiet9', '9')">9</th>
+            <td></td>
+            <td rowspan="2"><a href="#">Hệ điều hành mã nguồn mở</a></td>
+            <td rowspan="2"><a href="#">Phát triển ứng dụng Web 2</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th id="tiet10" onmouseover="tiet('tiet10', '10')" onmouseout="het('tiet10', '10')">10</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>   
+    </table>
+</body>
+</html>
